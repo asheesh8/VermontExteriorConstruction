@@ -20,7 +20,7 @@ export const site = {
     x: "https://x.com/vermontcustomex",
     youtube: "https://www.youtube.com/@VermontCustomExteriors",
   },
-  googleReviewCount: 5,
+  googleReviewCount: 16,
   url: "https://vermontcustomexteriors.com",
 };
 
@@ -33,21 +33,57 @@ export const nav = [
   { label: "Contact Us", href: "/contact-us" },
 ];
 
+// Real Google reviews for Vermont Custom Exteriors - Chittenden County (5.0, 16 reviews).
 export const testimonials = [
   {
-    name: "arish adhikari",
-    date: "2025-06-03",
-    text: "We couldnt be more then thankful for todd and his crew. That did our Porch that all came out stunning and amazing.",
+    name: "Wilhelmina Picard",
+    date: "Google review",
+    text: "I had a fantastic experience with Vermont Custom Exteriors. From start to finish, they were professional, efficient, and incredibly customer-focused. The quality of their work was top-notch—they were neat, worked quickly but carefully, and clearly took pride in what they do. What impressed me most was how willing they were to collaborate and make sure I was happy every step of the way. Excellent customer service and craftsmanship—I highly recommend them!",
+  },
+  {
+    name: "Dakota Oakes",
+    date: "Google review",
+    text: "I run a local business, and one of our specialties is deck building. We were having a hard time finding a company to install helical pile supports for our deck builds, until we found Vermont Custom Exteriors! For the few companies that do them, they were the best to work with.",
+  },
+  {
+    name: "Bill Bleau",
+    date: "Google review",
+    text: "Siding, gutters and composite decks. Excellent communication, prompt with responses. Work exceeded expectations and great attention to details. Good people to work with.",
+  },
+  {
+    name: "Dianna Mitchell",
+    date: "Google review",
+    text: "Noah and team did excellent work on our interior project. Our bathroom ceiling fans are working perfectly. The attic access and kitchen window were installed quickly and carefully. They accommodated our busy schedule and pets.",
+  },
+  {
+    name: "dionne heyliger",
+    date: "Google review",
+    text: "Needed a company to complete vinyl siding and gutters last minute. Vermont Custom Exteriors was able to come through no problem. Their crew was friendly, fast, and efficient. So nice to work with and my home looks beautiful!",
+  },
+  {
+    name: "Spiros Markwood",
+    date: "Google review",
+    text: "Excellent work! The team was fast, professional, and did a great job. The deck looks amazing, and everything was cleaned up perfectly. Highly recommend!",
+  },
+  {
+    name: "Phyllis Lepito",
+    date: "Google review",
+    text: "A huge thank you to Vermont Custom Exteriors! They did a great job on installing gutters, replaced fascia board and built a new fabulous deck! Noah and his crew were professional and hard working. I highly recommend them!",
   },
   {
     name: "Lance Martel",
-    date: "2025-05-09",
+    date: "Google review",
     text: "Attention to detail and our needs was second to none. Got the job done fast and was extremely thorough. Highly recommend. Will use again for projects.",
   },
   {
-    name: "Wilhelmina Picard",
-    date: "2025-05-08",
-    text: "I had a fantastic experience with Vermont Custom Exteriors. From start to finish, they were professional, efficient, and incredibly customer-focused. The quality of their work was top-notch—they were neat, worked quickly but carefully, and clearly took pride in what they do. What impressed me most was how willing they were to collaborate and make sure I was happy every step of the way. They regularly checked in, asked for feedback, and made adjustments as needed to ensure everything met my expectations. Excellent customer service and craftsmanship—I highly recommend them!",
+    name: "arish adhikari",
+    date: "Google review",
+    text: "We couldnt be more then thankful for todd and his crew. That did our Porch that all came out stunning and amazing.",
+  },
+  {
+    name: "Eric M",
+    date: "Google review",
+    text: "Great price. Great people to work with. Friendly and professional. Would use them again, but the job they did will last me forever.",
   },
 ];
 

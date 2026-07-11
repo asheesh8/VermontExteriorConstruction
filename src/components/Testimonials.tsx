@@ -87,7 +87,7 @@ export default function Testimonials() {
                           {t.name}
                         </span>
                         <span className="block text-xs text-ink/50">
-                          Google review · {t.date}
+                          Verified {t.date}
                         </span>
                       </span>
                     </figcaption>
