@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --pine: #10281e;
+  --pine-deep: #0a1d15;
+  --pine-mid: #1c3f30;
+  --cream: #f6f2ea;
+  --paper: #fffdf8;
+  --ink: #16211c;
+  --ember: #c2703a;
+  --ember-deep: #a5561f;
+  --sage: #647c6e;
+  --line: #e3dccd;
+  --gold: #d9a441;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-pine: var(--pine);
+  --color-pine-deep: var(--pine-deep);
+  --color-pine-mid: var(--pine-mid);
+  --color-cream: var(--cream);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ember: var(--ember);
+  --color-ember-deep: var(--ember-deep);
+  --color-sage: var(--sage);
+  --color-line: var(--line);
+  --color-gold: var(--gold);
+  --font-sans: var(--font-manrope);
+  --font-display: var(--font-fraunces);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-manrope), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--ember);
+  color: #fff;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), Georgia, serif;
+}
+
+/* Slow pan/zoom for still images used as hero backdrops */
+@keyframes kenburns {
+  0% {
+    transform: scale(1) translateY(0);
+  }
+  100% {
+    transform: scale(1.08) translateY(-1.5%);
+  }
+}
+.animate-kenburns {
+  animation: kenburns 18s ease-out forwards;
+}
+
+/* Marquee for the gallery film strip */
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.animate-marquee {
+  animation: marquee 55s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee 65s linear infinite reverse;
+}
+.marquee-paused:hover .animate-marquee,
+.marquee-paused:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}
+
+/* Subtle grain overlay for immersive dark sections */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.05 0'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Scroll cue */
+@keyframes scrollcue {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(8px);
+    opacity: 0.4;
+  }
+}
+.animate-scrollcue {
+  animation: scrollcue 1.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-kenburns,
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-scrollcue {
+    animation: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }
