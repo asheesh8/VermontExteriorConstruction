@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { FacebookIcon, InstagramIcon, XIcon, YoutubeIcon } from "./SocialIcons";
+import BuiltByCredit from "./BuiltByCredit";
 import { site } from "@/lib/site";
 import { services } from "@/lib/services";
 import { counties } from "@/lib/areas";
@@ -176,6 +177,10 @@ export default function Footer() {
             </Link>
           </nav>
         </div>
+      </div>
+
+      <div className="border-t border-white/5 py-4 text-center">
+        <BuiltByCredit />
       </div>
     </footer>
   );
