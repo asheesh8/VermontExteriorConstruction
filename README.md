@@ -7,6 +7,8 @@ counties.
 Built from scratch as a modern replacement for the client's WordPress/Elementor site, using
 the client's real project photography and business content throughout.
 
+**Live:** https://vermont-exterior-construction.vercel.app — Vercel, stock Next.js preset; pushes to `main` deploy to production. No environment variables (the contact form composes an email; there is no backend).
+
 ## Highlights
 
 - **Immersive hero** — aerial drone time-lapse video (roof job from underlayment to finished
